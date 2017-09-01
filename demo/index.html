@@ -49,6 +49,25 @@
         </div>
       </template>
     </demo-snippet>
+
+    <h3>Styling</h3>
+    <demo-snippet>
+      <template>
+        <div class="container">
+          <div class="inline">
+            <button>Click me!</button>
+            <wired-tooltip class="colored" text="Fancy tooltip"></wired-tooltip>
+          </div>
+        </div>
+        <style is="custom-style">
+          .colored {
+            --wired-tooltip-border-color: red;
+            --wired-tooltip-background: rgba(200, 200, 0, 0.2);
+            color: blue;
+          }
+        </style>
+      </template>
+    </demo-snippet>
   </div>
 </body>
 
