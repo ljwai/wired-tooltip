@@ -4,70 +4,55 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
-
   <title>wired-tooltip demo</title>
+  <!-- <script src="https://unpkg.com/@webcomponents/webcomponentsjs@next/webcomponents-loader.js"></script> -->
+  <style>
+    body {
+      font-family: sans-serif;
+      font-size: 16px;
+    }
 
-  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    .inline {
+      display: inline-block;
+    }
 
-  <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
-  <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
-  <link rel="import" href="../wired-tooltip.html">
+    .container {
+      padding: 50px 0;
+    }
 
-  <custom-style>
-    <style is="custom-style" include="demo-pages-shared-styles">
-      .inline {
-        display: inline-block;
-      }
+    button {
+      margin: 0 25px;
+    }
 
-      .container {
-        padding: 50px 0;
-      }
-
-      button {
-        margin: 0 25px;
-      }
-    </style>
-  </custom-style>
+    .colored {
+      --wired-tooltip-border-color: red;
+      --wired-tooltip-background: rgba(200, 200, 0, 0.2);
+      color: blue;
+    }
+  </style>
 </head>
 
 <body>
-  <div class="vertical-section-container centered">
-    <h3>Basic wired-tooltip demo</h3>
-    <demo-snippet>
-      <template>
-        <div class="container">
-          <div class="inline">
-            <button>Click me!</button>
-            <wired-tooltip text="Below"></wired-tooltip>
-          </div>
-          <button id="btn">Click me!</button>
-          <wired-tooltip position="top" for="btn" text="Above"></wired-tooltip>
-          <button id="lb">Click me!</button>
-          <wired-tooltip position="left" for="lb" text="Left"></wired-tooltip>
-          <button id="rb">Click me!</button>
-          <wired-tooltip position="right" for="rb" text="Right"></wired-tooltip>
-        </div>
-      </template>
-    </demo-snippet>
+  <script type="module" src="../wired-tooltip.js"></script>
 
-    <h3>Styling</h3>
-    <demo-snippet>
-      <template>
-        <div class="container">
-          <div class="inline">
-            <button>Click me!</button>
-            <wired-tooltip class="colored" text="Fancy tooltip"></wired-tooltip>
-          </div>
-        </div>
-        <style is="custom-style">
-          .colored {
-            --wired-tooltip-border-color: red;
-            --wired-tooltip-background: rgba(200, 200, 0, 0.2);
-            color: blue;
-          }
-        </style>
-      </template>
-    </demo-snippet>
+  <div class="container">
+    <div class="inline">
+      <button>Click me!</button>
+      <wired-tooltip text="Below"></wired-tooltip>
+    </div>
+    <button id="btn">Click me!</button>
+    <wired-tooltip position="top" for="btn" text="Above"></wired-tooltip>
+    <button id="lb">Click me!</button>
+    <wired-tooltip position="left" for="lb" text="Left"></wired-tooltip>
+    <button id="rb">Click me!</button>
+    <wired-tooltip position="right" for="rb" text="Right"></wired-tooltip>
+  </div>
+
+  <div class="container">
+    <div class="inline">
+      <button>Click me!</button>
+      <wired-tooltip class="colored" text="Fancy tooltip"></wired-tooltip>
+    </div>
   </div>
 </body>
 
