@@ -25,9 +25,14 @@ import { WiredTooltip } from "wired-tooltip"
 
 Use it in your web page:
 ```html
-<wired-radio text="Radio One"></wired-radio>
-<wired-radio text="Radio Two" checked></wired-radio>
-<wired-radio text="Radio disabled" disabled></wired-radio>
+<div>
+  <div class="inline">
+    <button>Click me!</button>
+    <wired-tooltip text="Below"></wired-tooltip>
+  </div>
+  <button id="btn">Click me!</button>
+  <wired-tooltip position="top" for="btn" text="Above"></wired-tooltip>
+</div>
 ```
 
 ### Properties
